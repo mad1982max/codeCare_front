@@ -1,0 +1,26 @@
+.login {
+    background: #f2f2f2;
+    color: rgb(90, 88, 88);
+    text-align: left;
+}
+
+.label {
+    width: 150px;
+    background:rgb(113, 173, 241);
+    font-size: 20px;
+    line-height: 38px;
+    height: 38px;
+    border-radius: 4px;
+    color: white
+}
+
+.error {
+    color: red;
+}
+
+.errorInputBorder {
+    border-color: rgb(10, 89, 236);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 10px rgba(238, 18, 91, 0.6);
+    outline: 0 none;
+    border-radius: 6px;
+}

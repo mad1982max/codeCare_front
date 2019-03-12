@@ -1,0 +1,67 @@
+.panel {
+    background: #f2f2f2;
+    color: rgb(90, 88, 88);
+    margin-bottom: 10px;
+}
+
+.single-day {
+    width: 100px;
+    background: rgb(235, 233, 233);
+}
+
+.table {
+    background: rgb(252, 250, 250);
+    box-sizing: padding-box;
+    min-width: 280px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+td {    
+    text-align: left;
+    height: 40px;
+    padding-top: 0;
+}
+
+tr {   
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    border-top: 1px solid rgb(250, 247, 247);
+}
+
+tr:nth-of-type(odd) {
+    color: rgb(90, 88, 88);
+    border-top: 1px solid rgb(216, 214, 214);
+    font-size: 16px;
+}
+
+.task {
+    width: 200px;
+    background : #E2ECF5;
+    border-left: 2px solid #6E9ECF;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.task:hover {
+    cursor: pointer;
+}
+
+#tableLeft, #tableRight {
+    width: 270px;
+}
+
+.actionMsg, .valiidation {
+    color: rgb(153, 126, 126);
+    font-size: 12px;
+    height: 20px;
+}
+
+
+
+

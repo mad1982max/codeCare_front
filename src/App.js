@@ -1,26 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
+
+import AuthService from './services/tokenDecode';
+import Header from './components/Header.component/Header';
+import Login from './components/Login.component/Login';
+import UserPanel from './components/UserPanel.component/UserPanel';
+
 import './App.css';
 
 class App extends Component {
+
   render() {
+    const auth = new AuthService();
+    const isLoggedIn = auth.isLoggedIn();  
+    let commonComponent = isLoggedIn? UserPanel : Login
+    
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <BrowserRouter>
+      <div className = 'App'>
+        <Header />
+        <Switch>
+          <Route exact path = '/' component= {commonComponent} />
+          <Route exact path='/userPanel' component={UserPanel} />
+        </Switch>
       </div>
+        
+      </BrowserRouter> 
     );
   }
 }
